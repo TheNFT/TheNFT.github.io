@@ -1,0 +1,62 @@
+.youtube {
+    opacity: 0.8; 
+}
+  
+.youtube:hover {
+    opacity: 1.0; 
+    color: #111;
+    background: rgb(235, 133, 255);
+    box-shadow: 0 0 20px rgb(235, 133, 255);
+}
+.glow {
+    opacity: 0.8;
+    overflow: hidden;
+}
+  
+.glow:hover {
+    opacity: 1.0; 
+    color: #111;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+.workshop {
+    opacity: 0.8; 
+}
+  
+.workshop:hover {
+    opacity: 1.0; 
+    color: #111;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+.twitter {
+    opacity: 0.8; 
+}
+  
+.twitter:hover {
+    opacity: 1.0; 
+    color: #111;
+    background: rgb(133, 208, 255);
+    box-shadow: 0 0 20px rgb(133, 208, 255);
+}
+.snapchat {
+    opacity: 0.8; 
+}
+  
+.snapchat:hover {
+    opacity: 1.0; 
+    color: #111;
+    background: rgb(235, 133, 255);
+    box-shadow: 0 0 20px rgb(235, 133, 255);
+}
+.loot {
+    opacity: 0.8; 
+}
+  
+.loot:hover {
+    opacity: 1.0; 
+    color: #111;
+    background: rgb(209, 46, 46);
+    box-shadow: 0 0 20px rgb(209, 46, 46);
+}

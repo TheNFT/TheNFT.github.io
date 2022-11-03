@@ -11,38 +11,21 @@
 	<link href="assets/css/vendor.min.css" rel="stylesheet" />
 	<link href="assets/css/app.min.css" rel="stylesheet" />
 	<link href="assets/css/cursor.css" rel="stylesheet">
+	<link href="assets/css/glow.css" rel="stylesheet">
 	<!-- ================== END core-css ================== -->
 
-	<!-- ================== BEGIN additional-css ================== -->
+	<!-- ================== BEGIN Plugins ================== -->
 	<link href="assets/plugins/lity/dist/lity.min.css" rel="stylesheet" />
 	<script src="assets/plugins/lity/dist/lity.min.js"></script>
-	<!-- ================== END additional-css ================== -->
+	<!-- ================== END Plugins ================== -->
 	
 	<!-- ================== BEGIN model-viewer ================== -->
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-	<script>
-		self.ModelViewerElement = self.ModelViewerElement || {};
-		self.ModelViewerElement.meshoptDecoderLocation = 'https://unpkg.com/meshoptimizer/meshopt_decoder.js';
-	</script>
+	<script>self.ModelViewerElement = self.ModelViewerElement || {};
+	self.ModelViewerElement.meshoptDecoderLocation = 'https://unpkg.com/meshoptimizer/meshopt_decoder.js';</script>
 	<!-- ================== END model-viewer ================== -->
 
-	<!-- ================== BEGIN glow ================== -->
-	<style>
-		.glow {
-			opacity: 0.8;
-			overflow: hidden;
-		}
-		  
-		.glow:hover {
-			opacity: 1.0; 
-			color: #111;
-			overflow: hidden;
-			background: rgb(255, 255, 255);
-			box-shadow: 0 0 20px rgb(255, 255, 255);
-		}
-	</style>
-	<!-- ================== END glow ================== -->
 </head>
 <body>
 	<div class="cursor"></div>
