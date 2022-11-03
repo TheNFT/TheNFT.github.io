@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   * {
-    cursor: none;
+    cursor: 1px solid white;
   }
   body {
     overflow-x: hidden;
