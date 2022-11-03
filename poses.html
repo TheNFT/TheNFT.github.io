@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>RTFKT | CREATOR HUB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	
+	<!-- ================== BEGIN core-css ================== -->
+	<link href="assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="assets/css/app.min.css" rel="stylesheet" />
+	<!-- ================== END core-css ================== -->
+
+	<!-- ================== BEGIN additional-css ================== -->
+	<link href="assets/plugins/lity/dist/lity.min.css" rel="stylesheet" />
+	<script src="assets/plugins/lity/dist/lity.min.js"></script>
+	<!-- ================== END additional-css ================== -->
+
+	<!-- ================== BEGIN model-viewer ================== -->
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+	<script>
+		self.ModelViewerElement = self.ModelViewerElement || {};
+		self.ModelViewerElement.meshoptDecoderLocation = 'https://unpkg.com/meshoptimizer/meshopt_decoder.js';
+	</script>
+	<!-- ================== END model-viewer ================== -->
+
+</head>
+<body>
+	<!-- BEGIN #app -->
+	<div id="app" class="app">
+		<!-- BEGIN #header -->
+		<div id="header" class="app-header">
+			<!-- BEGIN desktop-toggler -->
+			<div class="desktop-toggler">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed" data-dismiss-class="app-sidebar-toggled" data-toggle-target=".app">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</div>
+			<!-- BEGIN desktop-toggler -->
+			
+			<!-- BEGIN mobile-toggler -->
+			<div class="mobile-toggler">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-mobile-toggled" data-toggle-target=".app">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</div>
+			<!-- END mobile-toggler -->
+			
+			<!-- BEGIN brand -->
+			<div class="brand">
+				<a href="#" class="brand-logo">
+					<span class="brand-img">
+						<span class="brand-img-text text-theme">X</span>
+					</span>
+					<span class="brand-text">RTFKT CREATOR HUB</span>
+				</a>
+			</div>
+			<!-- END brand -->
+			
+			<!-- BEGIN menu -->
+			<div class="menu">
+				<div class="menu-item dropdown dropdown-mobile-full">
+					<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
+						<div class="menu-icon"><i class="bi bi-grid-3x3-gap nav-icon"></i></div>
+					</a>
+					<div class="dropdown-menu fade dropdown-menu-end w-300px text-center p-0 mt-1">
+						<div class="row row-grid gx-0">
+							<div class="col-4">
+								<a href="#" class="dropdown-item text-decoration-none p-3 bg-none glow">
+									<div class="position-relative">
+										<i class="fa fa-tint h2 opacity-5 d-block my-1"></i>
+									</div>
+									<div class="fw-500 fs-10px text-white">DRIP</div>
+								</a>
+							</div>
+							<div class="col-4">
+								<a href="#" class="dropdown-item text-decoration-none p-3 bg-none glow">
+									<div><i class="fa fa-moon h2 opacity-5 d-block my-1"></i></div>
+									<div class="fw-500 fs-10px text-white">ENVIRONMENT</div>
+								</a>
+							</div>
+							<div class="col-4">
+								<a href="#" class="dropdown-item text-decoration-none p-3 bg-none glow">
+									<div><i class="fa fa-hand-peace h2 opacity-5 d-block my-1"></i></div>
+									<div class="fw-500 fs-10px text-white">POSES</div>
+								</a>
+							</div>
+						</div>
+						<div class="row row-grid gx-0">
+							<div class="col-4">
+								<a href="#" class="dropdown-item text-decoration-none p-3 bg-none glow">
+									<div><i class="bi bi-collection-play h2 opacity-5 d-block my-1"></i></div>
+									<div class="fw-500 fs-10px text-white">TUTORIALS</div>
+								</a>
+							</div>
+							<div class="col-4">
+								<a href="#" class="dropdown-item text-decoration-none p-3 bg-none glow">
+									<div class="position-relative">
+										<i class="fa fa-graduation-cap h2 opacity-5 d-block my-1"></i>
+									</div>
+									<div class="fw-500 fs-10px text-white">WORKSHOPS</div>
+								</a>
+							</div>
+							<div class="col-4">
+								<a href="#" class="dropdown-item text-decoration-none p-3 bg-none glow">
+									<div><i class="fa fa-trophy h2 opacity-5 d-block my-1"></i></div>
+									<div class="fw-500 fs-10px text-white">CHALLENGES</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END menu -->
+		</div>
+		<!-- END #header -->
+		
+		<!-- BEGIN #sidebar -->
+		<div id="sidebar" class="app-sidebar">
+			<!-- BEGIN scrollbar -->
+			<div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+				<!-- BEGIN menu -->
+				<div class="menu">
+					<!-- Category -->
+					<div class="menu-header">Navigate</div>
+					<!-- Dashboard -->
+					<div class="menu-item">
+						<a href="index.html" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-cpu"></i></span>
+							<span class="menu-text">Dashboard</span>
+						</a>
+					</div>
+					<!-- Category -->
+					<div class="menu-header">Explore</div>
+					<!-- Tools Drop Down -->
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<i class="fas fa-unlock"></i>
+							</div>
+							<div class="menu-text d-flex align-items-center">Clone Tools</div> 
+							<span class="menu-caret"><b class="caret"></b></span>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="install.html" class="menu-link">
+									<div class="menu-text">Installation</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="docs.html" class="menu-link">
+									<div class="menu-text">Documentation</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- End Tools Drop Down -->
+					<!-- Category -->
+					<div class="menu-header">Packs</div>
+					<!-- Packs Drop Down -->
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<i class="fas fa-tint"></i>
+							</div>
+							<div class="menu-text d-flex align-items-center">Drip</div> 
+							<span class="menu-caret"><b class="caret"></b></span>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="drip.html" class="menu-link">
+									<div class="menu-text">RTFKT Drip Packs</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="drip.html" class="menu-link">
+									<div class="menu-text">Community Drip Packs</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- End Packs Drop Down -->
+					<!-- Light Drop Down -->
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<i class="fas fa-moon"></i>
+							</div>
+							<div class="menu-text d-flex align-items-center">Environment</div> 
+							<span class="menu-caret"><b class="caret"></b></span>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="docs.html" class="menu-link">
+									<div class="menu-text">Light Packs</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="docs.html" class="menu-link">
+									<div class="menu-text">Stage Packs</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- End Light Drop Down -->
+					<!-- Pose Stage Down -->
+					<div class="menu-item has-sub active">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<i class="fas fa-hand-peace"></i>
+							</div>
+							<div class="menu-text d-flex align-items-center">Pose</div> 
+							<span class="menu-caret"><b class="caret"></b></span>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="poses.html" class="menu-link">
+									<div class="menu-text">Mixamo Packs</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- End Pose Drop Down -->
+					<!-- Category -->
+					<div class="menu-header">Educate</div>
+					<!-- Tutorial Drop Down -->
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<i class="bi bi-collection-play"></i>
+							</div>
+							<div class="menu-text d-flex align-items-center">Tutorials</div> 
+							<span class="menu-caret"><b class="caret"></b></span>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="twitter.html" class="menu-link">
+									<div class="menu-text">Twitter</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="youtube.html" class="menu-link">
+									<div class="menu-text">YouTube</div>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="snapchat.html" class="menu-link">
+									<div class="menu-text">Snapchat</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- End Tutorial Drop Down -->
+					<!-- Workshops Drop Down -->
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<i class="fas fa-graduation-cap"></i>
+							</div>
+							<div class="menu-text d-flex align-items-center">Workshops</div> 
+							<span class="menu-caret"><b class="caret"></b></span>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="workshops.html" class="menu-link">
+									<div class="menu-text"><i class="fas fa-tv"></i> Livestream</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- End Workshops Drop Down -->
+					<!-- Challenges Drop Down -->
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-icon">
+								<i class="fas fa-trophy"></i>
+							</div>
+							<div class="menu-text d-flex align-items-center">Challenges</div> 
+							<span class="menu-caret"><b class="caret"></b></span>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="loot.html" class="menu-link">
+									<div class="menu-text"><i class="fas fa-cube"></i> Loot Pod Challenge</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- End Challenges Drop Down -->
+				</div>
+				<!-- END menu -->
+			</div>
+			<!-- END scrollbar -->
+		</div>
+		<!-- END #sidebar -->
+			
+		<!-- BEGIN mobile-sidebar-backdrop -->
+		<button class="app-sidebar-mobile-backdrop" data-toggle-target=".app" data-toggle-class="app-sidebar-mobile-toggled"></button>
+		<!-- END mobile-sidebar-backdrop -->
+		
+	<!-- BEGIN #content -->
+	<div id="content" class="app-content">
+		<!-- BEGIN row -->
+		<div class="row">
+			<!-- Pose Start -->
+			<div class="col-xl-4">
+				<!-- BEGIN card -->
+				<!-- image caps -->
+				<div class="card mb-3">					
+					<div class="ratio ratio-21x9 mb-6">							
+						<style>
+							#adventure-lazy-load-poster {
+							  position: absolute;
+							  left: 0;
+							  right: 0;
+							  top: 0;
+							  bottom: 0;
+							  background-image: url("assets/glb/adventure.png");
+							  background-size: contain;
+							  background-repeat: no-repeat;
+							  background-position: center;
+							}
+							#adventure-load {
+							  background-image: url("assets/glb/rtfkt_swoosh.svg");
+							  background-repeat: no-repeat;
+							  background-size: 24px 24px;
+							  background-position: 15% 50%;
+							  background-color: #000;
+							  color: white;
+							  cursor: pointer;
+							  border-radius: 6px;
+							  display: inline-block;
+							  padding: 10px 18px 9px 40px;
+							  font-weight: 500;
+							  box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
+							  position: absolute;
+							  left: 85%;
+							  top: 25%;
+							  transform: translate3d(-50%, -50%, 0);
+							  z-index: 100;
+							}
+						  </style>
+						  <!-- use unique asset to ensure lazy loading -->
+						  <model-viewer id="adventure-lazy-load" camera-controls autoplay touch-action="pan-y" reveal="manual" src="assets/glb/adventure.glb">
+							<div id="adventure-lazy-load-poster" slot="poster"></div>
+							<div id="adventure-load" slot="poster">View</div>
+						  </model-viewer>
+						  
+						  <script>
+							document.querySelector('#adventure-load').addEventListener('click', 
+							  () => document.querySelector('#adventure-lazy-load').dismissPoster());
+						  </script>
+				</div>		
+				<div class="list-group">
+					<div class="list-group-item border-top-0 rounded-top-0 d-flex align-items-center p-3">
+					  <div class="w-40px h-40px bg-opacity-100 d-flex align-items-center justify-content-center">
+						<img src="assets/img/user/mixamo.png" class="ms-100 mh-100 rounded-circle" />
+					  </div>
+					  <div class="flex-fill px-3">
+							<div class="fw-bold">Mixamo</div>
+							<a href="https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html" style="text-decoration: none;">
+						<div class="small text-white text-opacity-50">View License</div></a>
+					  </div>
+					  <div>
+						<br><div class="small text-white text-opacity-50">384mb</div>
+					  </div>
+					</div>
+					</div>
+					<div class="card-body bg-gray-600 bg-opacity-25">
+								<h5 class="card-title"><i class="fa fa-fw fa-hand-peace"></i> Adventure</h5>
+								<p class="card-text">384 Adventure Poses from <a href="https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html" style="text-decoration: none;">Mixamo.com</a></p>
+								<a href="" class="btn d-block btn-outline-theme btn-sm"> <i class="fa fa-download"></i> Download</a>
+							</div>
+					
+					<!-- END card-body -->
+					<!-- BEGIN card-arrow -->
+					<div class="card-arrow">
+						<div class="card-arrow-top-left"></div>
+						<div class="card-arrow-top-right"></div>
+						<div class="card-arrow-bottom-left"></div>
+						<div class="card-arrow-bottom-right"></div>
+					</div>
+					<!-- END card-arrow -->
+				</div>
+				<!-- END card -->
+			</div>
+			<!-- Pose End -->
+			<!-- Pose Start -->
+			<div class="col-xl-4">
+				<!-- BEGIN card -->
+				<!-- image caps -->
+				<div class="card mb-3">					
+					<div class="ratio ratio-21x9 mb-6">							
+						<style>
+							#combat-lazy-load-poster {
+							  position: absolute;
+							  left: 0;
+							  right: 0;
+							  top: 0;
+							  bottom: 0;
+							  background-image: url("assets/glb/combat.png");
+							  background-size: contain;
+							  background-repeat: no-repeat;
+							  background-position: center;
+							}
+							#combat-load {
+							  background-image: url("assets/glb/rtfkt_swoosh.svg");
+							  background-repeat: no-repeat;
+							  background-size: 24px 24px;
+							  background-position: 15% 50%;
+							  background-color: #000;
+							  color: white;
+							  cursor: pointer;
+							  border-radius: 6px;
+							  display: inline-block;
+							  padding: 10px 18px 9px 40px;
+							  font-weight: 500;
+							  box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
+							  position: absolute;
+							  left: 85%;
+							  top: 25%;
+							  transform: translate3d(-50%, -50%, 0);
+							  z-index: 100;
+							}
+						  </style>
+						  <!-- use unique asset to ensure lazy loading -->
+						  <model-viewer id="combat-lazy-load" camera-controls autoplay touch-action="pan-y" reveal="manual" src="assets/glb/combat.glb">
+							<div id="combat-lazy-load-poster" slot="poster"></div>
+							<div id="combat-load" slot="poster">View</div>
+						  </model-viewer>
+						  
+						  <script>
+							document.querySelector('#combat-load').addEventListener('click', 
+							  () => document.querySelector('#combat-lazy-load').dismissPoster());
+						  </script>
+				</div>		
+				<div class="list-group">
+					<div class="list-group-item border-top-0 rounded-top-0 d-flex align-items-center p-3">
+					  <div class="w-40px h-40px bg-opacity-100 d-flex align-items-center justify-content-center">
+						<img src="assets/img/user/mixamo.png" class="ms-100 mh-100 rounded-circle" />
+					  </div>
+					  <div class="flex-fill px-3">
+							<div class="fw-bold">Mixamo</div>
+							<a href="https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html" style="text-decoration: none;">
+						<div class="small text-white text-opacity-50">View License</div></a>
+					  </div>
+					  <div>
+						<br><div class="small text-white text-opacity-50">604mb</div>
+					  </div>
+					</div>
+					</div>
+					<div class="card-body">
+								<h5 class="card-title"><i class="fa fa-fw fa-hand-peace"></i> Combat</h5>
+								<p class="card-text">604 Combat Poses from <a href="https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html" style="text-decoration: none;">Mixamo.com</a></p>
+								<a href="" class="btn d-block btn-outline-theme btn-sm"> <i class="fa fa-download"></i> Download</a>
+							</div>
+					
+					<!-- END card-body -->
+					<!-- BEGIN card-arrow -->
+					<div class="card-arrow">
+						<div class="card-arrow-top-left"></div>
+						<div class="card-arrow-top-right"></div>
+						<div class="card-arrow-bottom-left"></div>
+						<div class="card-arrow-bottom-right"></div>
+					</div>
+					<!-- END card-arrow -->
+				</div>
+				<!-- END card -->
+			</div>
+			<!-- Pose End -->
+			<!-- Pose Start -->
+			<div class="col-xl-4">
+				<!-- BEGIN card -->
+				<!-- image caps -->
+				<div class="card mb-3">					
+					<div class="ratio ratio-21x9 mb-6">							
+						<style>
+							#dance-lazy-load-poster {
+							  position: absolute;
+							  left: 0;
+							  right: 0;
+							  top: 0;
+							  bottom: 0;
+							  background-image: url("assets/glb/dance.png");
+							  background-size: contain;
+							  background-repeat: no-repeat;
+							  background-position: center;
+							}
+							#dance-load {
+							  background-image: url("assets/glb/rtfkt_swoosh.svg");
+							  background-repeat: no-repeat;
+							  background-size: 24px 24px;
+							  background-position: 15% 50%;
+							  background-color: #000;
+							  color: white;
+							  cursor: pointer;
+							  border-radius: 6px;
+							  display: inline-block;
+							  padding: 10px 18px 9px 40px;
+							  font-weight: 500;
+							  box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
+							  position: absolute;
+							  left: 85%;
+							  top: 25%;
+							  transform: translate3d(-50%, -50%, 0);
+							  z-index: 100;
+							}
+						  </style>
+						  <!-- use unique asset to ensure lazy loading -->
+						  <model-viewer id="dance-lazy-load" camera-controls autoplay touch-action="pan-y" reveal="manual" src="assets/glb/dance.glb">
+							<div id="dance-lazy-load-poster" slot="poster"></div>
+							<div id="dance-load" slot="poster">View</div>
+						  </model-viewer>
+						  
+						  <script>
+							document.querySelector('#dance-load').addEventListener('click', 
+							  () => document.querySelector('#dance-lazy-load').dismissPoster());
+						  </script>
+				</div>		
+				<div class="list-group">
+					<div class="list-group-item border-top-0 rounded-top-0 d-flex align-items-center p-3">
+					  <div class="w-40px h-40px bg-opacity-100 d-flex align-items-center justify-content-center">
+						<img src="assets/img/user/mixamo.png" class="ms-100 mh-100 rounded-circle" />
+					  </div>
+					  <div class="flex-fill px-3">
+							<div class="fw-bold">Mixamo</div>
+							<a href="https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html" style="text-decoration: none;">
+						<div class="small text-white text-opacity-50">View License</div></a>
+					  </div>
+					  <div>
+						<br><div class="small text-white text-opacity-50">136mb</div>
+					  </div>
+					</div>
+					</div>
+					<div class="card-body bg-gray-600 bg-opacity-25">
+								<h5 class="card-title"><i class="fa fa-fw fa-hand-peace"></i> Dance</h5>
+								<p class="card-text">136 Dance Poses from <a href="https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html" style="text-decoration: none;">Mixamo.com</a></p>
+								<a href="" class="btn d-block btn-outline-theme btn-sm"> <i class="fa fa-download"></i> Download</a>
+							</div>
+					
+					<!-- END card-body -->
+					<!-- BEGIN card-arrow -->
+					<div class="card-arrow">
+						<div class="card-arrow-top-left"></div>
+						<div class="card-arrow-top-right"></div>
+						<div class="card-arrow-bottom-left"></div>
+						<div class="card-arrow-bottom-right"></div>
+					</div>
+					<!-- END card-arrow -->
+				</div>
+				<!-- END card -->
+			</div>
+			<!-- Pose End -->
+			<!-- Pose Start -->
+			<div class="col-xl-4">
+				<!-- BEGIN card -->
+				<!-- image caps -->
+				<div class="card mb-3">					
+					<div class="ratio ratio-21x9 mb-6">							
+						<style>
+							#fantasy-lazy-load-poster {
+							  position: absolute;
+							  left: 0;
+							  right: 0;
+							  top: 0;
+							  bottom: 0;
+							  background-image: url("assets/glb/fantasy.png");
+							  background-size: contain;
+							  background-repeat: no-repeat;
+							  background-position: center;
+							}
+							#fantasy-load {
+						     background-image: url("assets/glb/rtfkt_swoosh.svg");
+							  background-repeat: no-repeat;
+							  background-size: 24px 24px;
+							  background-position: 15% 50%;
+							  background-color: #000;
+							  color: white;
+							  cursor: pointer;
+							  border-radius: 6px;
+							  display: inline-block;
+							  padding: 10px 18px 9px 40px;
+							  font-weight: 500;
+							  box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
+							  position: absolute;
+							  left: 85%;
+							  top: 25%;
+							  transform: translate3d(-50%, -50%, 0);
+							  z-index: 100;
+							}
+						  </style>
+						  <!-- use unique asset to ensure lazy loading -->
+						  <model-viewer id="fantasy-lazy-load" camera-controls autoplay touch-action="pan-y" reveal="manual" src="assets/glb/fantasy.glb">
+							<div id="fantasy-lazy-load-poster" slot="poster"></div>
+							<div id="fantasy-load" slot="poster">View</div>
+						  </model-viewer>
+						  
+						  <script>
+							document.querySelector('#fantasy-load').addEventListener('click', 
+							  () => document.querySelector('#fantasy-lazy-load').dismissPoster());
+						  </script>
+				</div>		
+				<div class="list-group">
+					<div class="list-group-item border-top-0 rounded-top-0 d-flex align-items-center p-3">
+					  <div class="w-40px h-40px bg-opacity-100 d-flex align-items-center justify-content-center">
+						<img src="assets/img/user/mixamo.png" class="ms-100 mh-100 rounded-circle" />
+					  </div>
+					  <div class="flex-fill px-3">
+							<div class="fw-bold">Mixamo</div>
+							<a href="https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html" style="text-decoration: none;">
+						<div class="small text-white text-opacity-50">View License</div></a>
+					  </div>
+					  <div>
+						<br><div class="small text-white text-opacity-50">172mb</div>
+					  </div>
+					</div>
+					</div>
+					<div class="card-body bg-gray-600 bg-opacity-25">
+								<h5 class="card-title"><i class="fa fa-fw fa-hand-peace"></i> Fantasy</h5>
+								<p class="card-text">172 Fantasy Poses from <a href="https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html" style="text-decoration: none;">Mixamo.com</a></p>
+								<a href="" class="btn d-block btn-outline-theme btn-sm"> <i class="fa fa-download"></i> Download</a>
+							</div>
+					
+					<!-- END card-body -->
+					<!-- BEGIN card-arrow -->
+					<div class="card-arrow">
+						<div class="card-arrow-top-left"></div>
+						<div class="card-arrow-top-right"></div>
+						<div class="card-arrow-bottom-left"></div>
+						<div class="card-arrow-bottom-right"></div>
+					</div>
+					<!-- END card-arrow -->
+				</div>
+				<!-- END card -->
+			</div>
+			<!-- Pose End -->
+			<!-- Pose Start -->
+			<div class="col-xl-4">
+				<!-- BEGIN card -->
+				<!-- image caps -->
+				<div class="card mb-3">					
+					<div class="ratio ratio-21x9 mb-6">							
+						<style>
+							#sports-lazy-load-poster {
+							  position: absolute;
+							  left: 0;
+							  right: 0;
+							  top: 0;
+							  bottom: 0;
+							  background-image: url("assets/glb/sports.png");
+							  background-size: contain;
+							  background-repeat: no-repeat;
+							  background-position: center;
+							}
+							#sports-load {
+							  background-image: url("assets/glb/rtfkt_swoosh.svg");
+							  background-repeat: no-repeat;
+							  background-size: 24px 24px;
+							  background-position: 15% 50%;
+							  background-color: #000;
+							  color: white;
+							  cursor: pointer;
+							  border-radius: 6px;
+							  display: inline-block;
+							  padding: 10px 18px 9px 40px;
+							  font-weight: 500;
+							  box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
+							  position: absolute;
+							  left: 85%;
+							  top: 25%;
+							  transform: translate3d(-50%, -50%, 0);
+							  z-index: 100;
+							}
+						  </style>
+						  <!-- use unique asset to ensure lazy loading -->
+						  <model-viewer id="sports-lazy-load" camera-controls autoplay touch-action="pan-y" reveal="manual" src="assets/glb/sports.glb">
+							<div id="sports-lazy-load-poster" slot="poster"></div>
+							<div id="sports-load" slot="poster">View</div>
+						  </model-viewer>
+						  
+						  <script>
+							document.querySelector('#sports-load').addEventListener('click', 
+							  () => document.querySelector('#sports-lazy-load').dismissPoster());
+						  </script>
+				</div>		
+				<div class="list-group">
+					<div class="list-group-item border-top-0 rounded-top-0 d-flex align-items-center p-3">
+					  <div class="w-40px h-40px bg-opacity-100 d-flex align-items-center justify-content-center">
+						<img src="assets/img/user/mixamo.png" class="ms-100 mh-100 rounded-circle" />
+					  </div>
+					  <div class="flex-fill px-3">
+							<div class="fw-bold">Mixamo</div>
+							<a href="https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html" style="text-decoration: none;">
+						<div class="small text-white text-opacity-50">View License</div></a>
+					  </div>
+					  <div>
+						<br><div class="small text-white text-opacity-50">284mb</div>
+					  </div>
+					</div>
+					</div>
+					<div class="card-body bg-gray-600 bg-opacity-25">
+								<h5 class="card-title"><i class="fa fa-fw fa-hand-peace"></i> Sports</h5>
+								<p class="card-text">284 Sports Poses from <a href="https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html" style="text-decoration: none;">Mixamo.com</a></p>
+								<a href="" class="btn d-block btn-outline-theme btn-sm"> <i class="fa fa-download"></i> Download</a>
+							</div>
+					
+					<!-- END card-body -->
+					<!-- BEGIN card-arrow -->
+					<div class="card-arrow">
+						<div class="card-arrow-top-left"></div>
+						<div class="card-arrow-top-right"></div>
+						<div class="card-arrow-bottom-left"></div>
+						<div class="card-arrow-bottom-right"></div>
+					</div>
+					<!-- END card-arrow -->
+				</div>
+				<!-- END card -->
+			</div>
+			<!-- Pose End -->
+			<!-- Pose Start -->
+			<div class="col-xl-4">
+				<!-- BEGIN card -->
+				<!-- image caps -->
+				<div class="card mb-3">					
+					<div class="ratio ratio-21x9 mb-6">							
+						<style>
+							#superhero-lazy-load-poster {
+							  position: absolute;
+							  left: 0;
+							  right: 0;
+							  top: 0;
+							  bottom: 0;
+							  background-image: url("assets/glb/superhero.png");
+							  background-size: contain;
+							  background-repeat: no-repeat;
+							  background-position: center;
+							}
+							#superhero-load {
+							  background-image: url("assets/glb/rtfkt_swoosh.svg");
+							  background-repeat: no-repeat;
+							  background-size: 24px 24px;
+							  background-position: 15% 50%;
+							  background-color: #000;
+							  color: white;
+							  cursor: pointer;
+							  border-radius: 6px;
+							  display: inline-block;
+							  padding: 10px 18px 9px 40px;
+							  font-weight: 500;
+							  box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
+							  position: absolute;
+							  left: 85%;
+							  top: 25%;
+							  transform: translate3d(-50%, -50%, 0);
+							  z-index: 100;
+							}
+						  </style>
+						  <!-- use unique asset to ensure lazy loading -->
+						  <model-viewer id="superhero-lazy-load" camera-controls autoplay touch-action="pan-y" reveal="manual" src="assets/glb/superhero.glb">
+							<div id="superhero-lazy-load-poster" slot="poster"></div>
+							<div id="superhero-load" slot="poster">View</div>
+						  </model-viewer>
+						  
+						  <script>
+							document.querySelector('#superhero-load').addEventListener('click', 
+							  () => document.querySelector('#superhero-lazy-load').dismissPoster());
+						  </script>
+				</div>		
+				<div class="list-group">
+					<div class="list-group-item border-top-0 rounded-top-0 d-flex align-items-center p-3">
+					  <div class="w-40px h-40px bg-opacity-100 d-flex align-items-center justify-content-center">
+						<img src="assets/img/user/mixamo.png" class="ms-100 mh-100 rounded-circle" />
+					  </div>
+					  <div class="flex-fill px-3">
+							<div class="fw-bold">Mixamo</div>
+							<a href="https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html" style="text-decoration: none;">
+						<div class="small text-white text-opacity-50">View License</div></a>
+					  </div>
+					  <div>
+						<br><div class="small text-white text-opacity-50">36mb</div>
+					  </div>
+					</div>
+					</div>
+					<div class="card-body bg-gray-600 bg-opacity-25">
+								<h5 class="card-title"><i class="fa fa-fw fa-hand-peace"></i> Super Hero</h5>
+								<p class="card-text">36 Super Hero Poses from <a href="https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html" style="text-decoration: none;">Mixamo.com</a></p>
+								<a href="" class="btn d-block btn-outline-theme btn-sm"> <i class="fa fa-download"></i> Download</a>
+							</div>
+					
+					<!-- END card-body -->
+					<!-- BEGIN card-arrow -->
+					<div class="card-arrow">
+						<div class="card-arrow-top-left"></div>
+						<div class="card-arrow-top-right"></div>
+						<div class="card-arrow-bottom-left"></div>
+						<div class="card-arrow-bottom-right"></div>
+					</div>
+					<!-- END card-arrow -->
+				</div>
+				<!-- END card -->
+			</div>
+			<!-- Pose End -->
+		</div>
+		<!-- END row -->
+	</div>
+	<!-- END #content -->
+		
+		<!-- BEGIN btn-scroll-top -->
+		<a href="#" data-toggle="scroll-to-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+		<!-- END btn-scroll-top -->
+	</div>
+	<!-- END #app -->
+	
+	<!-- ================== BEGIN core-js ================== -->
+	<script src="assets/js/vendor.min.js"></script>
+	<script src="assets/js/app.min.js"></script>
+	<!-- ================== END core-js ================== -->
+	
+</body>
+</html>
